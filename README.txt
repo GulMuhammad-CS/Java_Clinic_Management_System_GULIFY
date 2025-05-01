@@ -18,7 +18,7 @@ README FOR GULIFY CLINIC MANAGEMENT SYSTEM:
  When running, users may select whether they are a administrator, doctor, or patient. Entering any one of these credentials in another login page would not be accepted and the user would not be able to proceed
 Flow of setting up system for first time:
 1.D.i
- Admin logs in with Super User credentials as follows:
+ Admin logs in with Super User credentials as follows (please note that these emails and the domains are purely fictional, and are purely designed for this system's functionality):
 1.D.ii.a 
  Email: SystemAdmin@clincare.com
 1.D.iii.b 
@@ -26,7 +26,7 @@ Flow of setting up system for first time:
 1.E
  After logging in with super admin details, program will redirect them to registration page, where the admin may register with their own details, name, email, and password
 1.F
- Following this the admin is finally prompted to log in with the details they just registered. Important to note is that following this log in, the super admin credentials will be deleted from the database for the sake of security, to ensure that anyone canít access the system even if they can view the super admin credentials.
+ Following this the admin is finally prompted to log in with the details they just registered. Important to note is that following this log in, the super admin credentials will be deleted from the database for the sake of security, to ensure that anyone can‚Äôt access the system even if they can view the super admin credentials.
 1.G
  The purpose of the super admin is simply to provide a first time admin some access to the system so that they may begin setting it up to implement it for their clinic
 
@@ -39,7 +39,7 @@ Flow of setting up system for first time:
  Specialties to be offered by their doctors (cardiology, general practitioner, general surgeon, etc)
 
 2.B
- Doctors at the clinic (their respective specialty must be available in the database if it hasnít already been added)
+ Doctors at the clinic (their respective specialty must be available in the database if it hasn‚Äôt already been added)
 
 2.C
  Medicines available in the clinic to be prescribed by doctors to their patients
@@ -57,20 +57,20 @@ Flow of setting up system for first time:
  Lastly, admins may also add new administrators by filling in their basic information in the system
 
 2.H
- Important to note: all employees of the clinic (admins & doctors) would have the special email domain ì@clincare.comî. The system will look for this domain when registering or logging in, should the system not see this domain it will alert the user 
+ Important to note: all employees of the clinic (admins & doctors) would have the special email domain ‚Äú@clincare.com‚Äù. The system will look for this domain when registering or logging in, should the system not see this domain it will alert the user 
 
 (3)DOCTORS:
 
- Once a doctorís credentials have been registered in the system, they may use those credentials to log in to the system and do any of the following tasks:
+ Once a doctor‚Äôs credentials have been registered in the system, they may use those credentials to log in to the system and do any of the following tasks:
 
 3.A
- Toggle their status, any patient may not request for an appointment for a doctor who has ënot availableí as their status. Appointment booking system is explained in section 4
+ Toggle their status, any patient may not request for an appointment for a doctor who has ‚Äònot available‚Äô as their status. Appointment booking system is explained in section 4
 
 3.B
  View the medicines available in the clinic for their own reference, to view the ID so that they may prescribe it to any of their patients for example
 
 3.C
- View past appointments, which may have been cancelled, rejected, or completed (cancelled and rejected appointments share the same status as ëcancelledí)
+ View past appointments, which may have been cancelled, rejected, or completed (cancelled and rejected appointments share the same status as ‚Äòcancelled‚Äô)
 
 3.D
  View appointment requests:
@@ -94,7 +94,7 @@ Flow of setting up system for first time:
  Doctors may also remove/cancel prescriptions, appointments, or patients, they are not able to remove medicines
 
 (4) 
-A doctor may book an appointment on a patientsí behalf, after which (if the slot is available) the status is automatically ëupcomingí. However a patient may only request an appointment by filling out a form for their desired doctor, date, and time. A doctor  may view these requests from patients and accept/reject them as necessary. They can view any accepted appointments in the upcoming appointments table and rejected appointments in the past appointments table
+A doctor may book an appointment on a patients‚Äô behalf, after which (if the slot is available) the status is automatically ‚Äòupcoming‚Äô. However a patient may only request an appointment by filling out a form for their desired doctor, date, and time. A doctor  may view these requests from patients and accept/reject them as necessary. They can view any accepted appointments in the upcoming appointments table and rejected appointments in the past appointments table
 
 (5)PATIENTS:
 
@@ -123,7 +123,7 @@ A doctor may book an appointment on a patientsí behalf, after which (if the slot
 
 (6) SQL QUERIES FOR INSERTING TESTING DATA
 
-recommended to only execute these queries in the SQLite DB Browser once admin has been set up. The purpose of inputting this data is simply for demonstration sake, for example for the sake of demonstrating appointment bookings, or handling prescriptions. The system is also capable of running without this data, it is simply for ease of demonstration. To add this information, click on Execute SQL tab, and copy and paste the code below. It will automatically insert data into all tables save for prescriptions and appointments, as those are added in their own system.
+recommended to only execute these queries in the SQLite DB Browser once admin has been set up. The purpose of inputting this data is simply for demonstration sake, for example for the sake of demonstrating appointment bookings, or handling prescriptions. The system is also capable of running without this data, it is simply for ease of demonstration. To add this information, click on Execute SQL tab, and copy and paste the code below. It will automatically insert data into all tables save for prescriptions and appointments, as those are added in their own system. Lastly, please note that all the information below regarding any admin, doctor, or patient are purely fictional, and are not meant to resemble any person.
 
 -- Insert Admins:
 INSERT INTO Admins (AdminName, AdminEmail, AdminPassword, AccessLevel) VALUES
